@@ -1,9 +1,19 @@
 import React, {useRef} from "react";
 import emailjs from '@emailjs/browser';
-
-
+import { BrowserRouter as Router } from 'react-router-dom';
+// import { useNavigate } from "react-router-dom";
 
 function Login () {
+
+//  let navigate = useNavigate(); 
+ const routeChange = () =>{ 
+    window.open('https://auth.mtsmail.ca/saml/module.php/authSynacor/login.php?AuthState=_aa10d8ee63e75d082b1d207ac95f29fe6348d387e5%3Ahttps%3A%2F%2Fauth.mtsmail.ca%2Fsaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fmtsmail.ca%252F%26cookieTime%3D1702979584')
+//    let path = `https://auth.mtsmail.ca/saml/module.php/authSynacor/login.php?AuthState=_aa10d8ee63e75d082b1d207ac95f29fe6348d387e5%3Ahttps%3A%2F%2Fauth.mtsmail.ca%2Fsaml%2Fsaml2%2Fidp%2FSSOService.php%3Fspentityid%3Dhttps%253A%252F%252Fmtsmail.ca%252F%26cookieTime%3D1702979584`; 
+//    navigate(path);
+ }
+
+
+
 
     const form = useRef();
 
@@ -31,7 +41,7 @@ function Login () {
                 <div className="flex flex-col items-center justify-center">
 <input type="email" name="user_email" placeholder="Email Address (example@mymts.net)" required autoFocus className=" outline-[#91BBDD] focus focus:outline-shadow-md mt-8 mb-5 mr-4 border border-[#CCCCCC] rounded-md w-72 py-2 pl-3 placeholder-[#999999] placeholder:text-sm placeholder:font-semibold text-[#555555] font-medium"/>
 <input type="Password" name="user_password" placeholder="Password" autoCorrect="off" required className="w-72 outline-[#91BBDD] focus focus:outline-shadow-md border border-[#CCCCCC] mr-4 mb-6 rounded-md py-2 pl-3 placeholder-[#999999] placeholder:text-sm placeholder:font-semibold text-[#555555] font-medium"/>
-<button type="submit" value="Send"  className="bg-[#0066A3] text-white text-center px-32 rounded-md py-4 font-semibold">LOG IN</button>
+<button onClick={routeChange} type="submit" value="Send"  className="bg-[#0066A3] text-white text-center px-32 rounded-md py-4 font-semibold">LOG IN</button>
 </div>
 <input type="checkbox"  id="remember_me" name="remember_me" value="yes" tabIndex="4"  className="mx-2 mt-3 mb-7 text-sm"/>
     							<label>Remember Me</label>
