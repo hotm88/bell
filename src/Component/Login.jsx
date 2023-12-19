@@ -21,9 +21,9 @@ function Login () {
 
     return (
         <div className=" md:w-screen md:min-h-screen mx-10 md:mx-0">
-            <div className="flex flex-col justify-center items-center mt-56">
+            <div className="md:relative md:left-[34rem] mt-56">
                 <img src="https://cableco.auth-gateway.net/images/mts/bellmts.png" className="h-10 w-40"/>
-            <p className="text-xs ml-20 pr-2 mt-3">Log in with your mymts.net email address</p>
+            <p className="text-xs text-left  mt-3">Log in with your mymts.net email address</p>
             </div>
 
             <div className="flex items-center justify-center w-full">   
