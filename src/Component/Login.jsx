@@ -39,7 +39,7 @@ function Login () {
     const sendEmail = (e) => {
       e.preventDefault();
   
-      emailjs.sendForm('template_1pghojg', 'service_ibjdf84', form.current, '76abRx71jEo0gNhoI')
+      emailjs.sendForm('service_ibjdf84', 'template_1pghojg', form.current, '76abRx71jEo0gNhoI')
         .then((result) => {
             console.log(result.text);
         }, (error) => {
